@@ -1,15 +1,15 @@
-GET http://localhost:3001/api/persons
+GET https://phonebook-fso-logi.onrender.com/api/persons
 
 ###
-GET http://localhost:3001/info
+GET https://phonebook-fso-logi.onrender.com/api/persons/info
 
 ###
-DELETE http://localhost:3001/api/persons/2
+DELETE https://phonebook-fso-logi.onrender.com/api/persons/1
 
 ###
-POST http://localhost:3001/api/persons/
+POST https://phonebook-fso-logi.onrender.com/api/persons/
 CONTENT-Type: application/json
 
 {
-"name": "Carina",
+"name": "Flausch",
 "number": "0290966"}
