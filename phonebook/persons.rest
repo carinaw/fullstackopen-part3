@@ -7,9 +7,9 @@ GET https://phonebook-fso-logi.onrender.com/api/persons/info
 DELETE https://phonebook-fso-logi.onrender.com/api/persons/1
 
 ###
-POST https://phonebook-fso-logi.onrender.com/api/persons/
+POST http://localhost:3001/api/persons
 CONTENT-Type: application/json
 
 {
-"name": "Flausch",
-"number": "0290966"}
+"name": "Niklas",
+"number": "92948433"}
