@@ -29,13 +29,11 @@ const errorHandler = (error, request, response, next) => {
 
 app.use(errorHandler);
 
-const persons = [];
-
 app.get("/", (request, response) => {
 	response.send("<h1>Persons</h1>");
 });
 
-app.get("/api/persons", (request, response, persons) => {
+app.get("/api/persons", (request, response) => {
 	Person.find({}).then((persons) => {
 		response.json(persons);
 	});
@@ -67,7 +65,7 @@ app.get("/info", (request, response) => {
 
 app.delete("/api/persons/:id", (request, response, next) => {
 	Person.findByIdAndDelete(request.params.id)
-		.then((result) => {
+		.then(() => {
 			response.status(204).end();
 		})
 		.catch((error) => next(error));

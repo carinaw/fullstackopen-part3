@@ -34,7 +34,7 @@ if (process.argv.length < 4) {
 }
 
 if (process.argv.length > 3) {
-	person.save().then((result) => {
+	person.save().then((person) => {
 		console.log(`added ${person.name} number ${person.number} to phonebook`);
 		mongoose.connection.close();
 	});
